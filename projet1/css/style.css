@@ -263,13 +263,20 @@ h2 {
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: 2rem;
     font-family: 'Raleway', sans-serif;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.artprincipal p{
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
 .ancre {
     display: flex;
     justify-content: space-around;
@@ -297,6 +304,7 @@ p {
         margin-right: 0;
         padding-left: 2%;
         padding-right: 2%;
+        font-size: 1.2rem;
         
     }
     .imgtext1, .imgtext3 {
