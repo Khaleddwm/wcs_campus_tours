@@ -5,17 +5,6 @@
     --primary: #EE6B6B;
     --black: #2e2e2e;
 }
-/*font open-sans-regular - latin */
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-        url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/open-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 
 /* Css liens */
 
@@ -90,6 +79,13 @@ a {
     background-color: var(--primary);
     transform: translateY(-100%);
     transition: transform .3s;
+    font-family: 'Gentium Basic', serif;
+
+
+
+
+
+
 }
 /*animation js du burger menu*/
 .menu:not([hidden]) {
@@ -221,7 +217,7 @@ a {
         justify-content: space-around;
         transform: translateY(0);
         width: 100%;
-        
+        font-family: 'Gentium Basic', serif;
         
     }
 
@@ -229,7 +225,6 @@ a {
         display: none;
     }
 } 
-
 
 
 /* CSS Khaled */
