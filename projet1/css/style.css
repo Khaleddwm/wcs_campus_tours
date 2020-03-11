@@ -27,6 +27,7 @@ body {
     color: var(--black);
     text-align: center;
     margin-bottom: 35px;
+    background-color: whitesmoke;
     
 }
 
@@ -168,6 +169,7 @@ a {
 @media screen and (max-width: 576px) {
     body[data-burger="true"]{
         overflow: hidden;
+        
     }
 }
 
@@ -199,6 +201,8 @@ a {
     .container {
         max-width: 1568px;
     }
+
+    
 }
 
 /* Largeur > 1200px */
@@ -284,6 +288,8 @@ p {
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
+        padding-left: 2%;
+        padding-right: 2%;
         
     }
     .imgtext1, .imgtext3 {
@@ -295,15 +301,20 @@ p {
         float: right;
         width: 50%;
         margin-left: 50%;
+        padding-bottom: 10px;
         }
     .artprincipal h2 {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 50px;
+        padding-top: 100px;
     }
     .ancre {
         display: none;
+    }
+
+    body {
+        margin-bottom: 0px;
     }
 }
 
