@@ -47,12 +47,16 @@ body {
     justify-content: space-between;
 }
 
-
+article {
+    padding-bottom: 10px;
+}
 
 a {
     color: #fff;
     text-decoration: none;
 }
+
+
 
 /* Logo  */
 
@@ -164,6 +168,9 @@ a {
     scroll-margin-top: 4.4rem;
 }
 
+p {
+    padding-top: 20px;
+}
 /* mediaquery affichage de la page */
 
 @media screen and (max-width: 576px) {
