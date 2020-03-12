@@ -5,21 +5,14 @@
     --primary: #EE6B6B;
     --black: #2e2e2e;
 }
-/*font open-sans-regular - latin */
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-        url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/open-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 
 
-/* Css liens */
+/* Css Carlos */
 
-/*body*/
+/* ---------------------------------------------------------------------Body------------------------------------------------------------------------------ */
+
+/*Body Mobile*/
+
 body {
     font-family: 'Open Sans', sans-serif;
     /* font-size: 1.6rem; Déjà déclaré dans le base.css */
@@ -31,8 +24,27 @@ body {
     
 }
 
+.scroll {
+    scroll-margin-top: 4.4rem;
+}
 
-/* classe du header*/
+p {
+    padding-top: 20px;
+}
+
+/* Body Web */
+
+@media screen and (max-width: 576px) {
+    body[data-burger="true"]{
+        overflow: hidden;
+        
+    }
+}
+
+/* -----------------------------------------------------------------------Header------------------------------------------------------------------ */
+
+
+/* Header Mobile*/
 .site-header {
     background-color: var(--primary);
     position: fixed;
@@ -47,25 +59,28 @@ body {
     justify-content: space-between;
 }
 
-article {
-    padding-bottom: 10px;
+/* Headers web : médiaquéry header + div .site header et containeur  */
+
+/* Largeur > 576px */
+
+@media screen and (min-width: 576px) {
+    .site-header .container {
+        justify-content: flex-start;
+    }
 }
 
+/* ---------------------------------------------------------------------------a---------------------------------------------------------------------------- */
+
+/* Couleur du texte nav  */
 a {
     color: #fff;
     text-decoration: none;
 }
 
+/* ------------------------------------------------------------------------Div= Containeur------------------------------------------------------------------- */
 
+/* Container Mobile enfants = logo, nav, ul, li, class=menu */
 
-/* Logo  */
-
-.logo {
-    position: relative;
-    z-index: 100;
-}
-
-/*div */
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -77,12 +92,57 @@ a {
     padding-right: 1.5rem;
 }
 
-/*nav*/
+/* Containeur Web (Media Queries*/
+
+/* Largeur > 576px */
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 896px;
+    }
+}
+
+/* Largeur > 768px */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1184px;
+    }
+}
+
+/* Largeur > 992px */
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 1568px;
+    } 
+}
+
+/* Largeur > 1200px */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1824px;
+    }
+}
+
+/* -----------------------------------------------------------------------Logo----------------------------------------------------------------------------- */
+
+/* Logo Mobile & Web  */
+
+.logo {
+    position: relative;
+    z-index: 100;
+}
+
+/* -------------------------------------------------------------Nav class = main-nav---------------------------------------------------------------------------- */
+
+/*Nav Web & Mobile*/
 .main-nav {
     display: flex;
     margin-left: 1rem;
 }
-/*ul + Pour afficher du menu dans le burger menu */
+
+/* ------------------------------------------------------------------------Menu-------------------------------------------------------------------------------- */
+
+/*ul class = menu  (Pour afficher du menu dans le burger menu) */
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -95,13 +155,58 @@ a {
     background-color: var(--primary);
     transform: translateY(-100%);
     transition: transform .3s;
+/* ------------------------------------------------------------------------Font Bar de Navigation Mode Mobile------------------------------------------------------ */
+    font-family: 'Gentium Basic', serif;                                         
+
 }
-/*animation js du burger menu*/
+
+/*lien du menu */
+.menu a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color .3s ease-in-out;
+}
+
+.menu a:hover,
+.menu a:focus {
+    outline: 0;
+    background-color: rgba(0,0,0,.25);
+}
+
+
+/*médiaquery du burger menu */
+/* Largeur > 576px */
+@media screen and (min-width: 576px) {
+    .menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(0);
+        width: 100%;
+/* ------------------------------------------------------------------------Font Bar de Navigation Mode Web-------------------------------------------------------------------------------- */
+        font-family: 'Gentium Basic', serif;                                         
+        
+    }
+
+    .toggle-menu {  /*Je fais disparaitre le burger menu au dessus de 576px*/
+        display: none;
+    }
+} 
+
+
+/* ---------------------------------------------------------------Burger Menu------------------------------------------------------------------------------- */
+
+/*Animation js du burger menu*/
+
 .menu:not([hidden]) {
     transform: translateY(0);
 }
-/*burger menu création + annimation*/
-/*button du burger menu*/
+/*burger menu création + annimation et  boutton du burger menu*/
 .toggle-menu {
     position: relative;
     z-index: 100;
@@ -148,106 +253,16 @@ a {
     transform: rotate(-45deg); /*transformation en X*/
 }
 
-/*lien du menu */
-.menu a {
-    display: block;
-    padding: 1rem;
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    transition: background-color .3s ease-in-out;
-}
 
-.menu a:hover,
-.menu a:focus {
-    outline: 0;
-    background-color: rgba(0,0,0,.25);
-}
-
-.scroll {
-    scroll-margin-top: 4.4rem;
-}
-
-p {
-    padding-top: 20px;
-}
-/* mediaquery affichage de la page */
-
-@media screen and (max-width: 576px) {
-    body[data-burger="true"]{
-        overflow: hidden;
-        
-    }
-}
-
-/*médiaquéry header + div */ 
-/* Largeur > 576px */
-@media screen and (min-width: 576px) {
-    .site-header .container {
-        justify-content: flex-start;
-    }
-}
-
-
-/* Largeur > 576px */
-@media screen and (min-width: 576px) {
-    .container {
-        max-width: 896px;
-    }
-}
-
-/* Largeur > 768px */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 1184px;
-    }
-}
-
-/* Largeur > 992px */
-@media screen and (min-width: 992px) {
-    .container {
-        max-width: 1568px;
-    }
-
-    
-}
-
-/* Largeur > 1200px */
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1824px;
-    }
-}
-
-
-
-/*médiaquery du burger menu */
-/* Largeur > 576px */
-@media screen and (min-width: 576px) {
-    .menu {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateY(0);
-        width: 100%;
-        
-        
-    }
-
-    .toggle-menu {  /*Je fais disparaitre le burger menu au dessus de 576px*/
-        display: none;
-    }
-} 
-
-
-
-/* CSS Khaled */
+/* -----------------------------------------------------------------------------CSS Khaled ----------------------------------------------------------------------------------------------*/
 
 h2 {
     font-size: 40px;
     font-family: 'Varela Round', sans-serif;
+}
+
+article {
+    padding-bottom: 10px;
 }
 
 .artprincipal h2 {
@@ -293,6 +308,8 @@ h3 {
     
 }
 
+/* Version Web */
+
 @media screen and (min-width: 576px) {
 
     .artprincipal p{
@@ -333,7 +350,7 @@ h3 {
     }
 }
 
-/*footer*/
+/*footer Mobile*/
 ​
 footer{
 	background-color:#39424e;
@@ -372,7 +389,7 @@ footer div p {
 	margin-top:0;
 }
 ​
-/*footer plus de 700px*/
+/*footer plus de 576px*/
 ​
 @media screen and (min-width:576px){
 	footer{
