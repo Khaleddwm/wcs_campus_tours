@@ -274,9 +274,14 @@ article {
     padding-bottom: 10px;
 }
 
+.artprincipal h1 {
+    padding-top: 100px;
+    font-size: 5rem;
+}
+
 .artprincipal h2 {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .artprincipal img {
@@ -312,6 +317,10 @@ article {
 
 @media screen and (min-width: 576px) {
 
+    .artprincipal h1 {
+        font-size: 8rem;
+    }
+
     .artprincipal p{
         display: flex;
         align-content: center;
@@ -339,7 +348,7 @@ article {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 100px;
+        padding-top: 50px;
     }
     .ancre {
         display: none;
