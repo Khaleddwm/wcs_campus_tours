@@ -20,7 +20,7 @@ body {
     color: var(--black);
     text-align: center;
     margin-bottom: 35px;
-    background-color: whitesmoke;
+    background-color: #ECECEC;
     
 }
 
@@ -28,9 +28,26 @@ body {
     scroll-margin-top: 4.4rem;
 }
 
+h2 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+h3 {
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+  }
+
 p {
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
 }
+
 
 /* Body Web */
 
@@ -156,7 +173,8 @@ a {
     transform: translateY(-100%);
     transition: transform .3s;
 /* ------------------------------------------------------------------------Font Bar de Navigation Mode Mobile------------------------------------------------------ */
-    font-family: 'Gentium Basic', serif;                                         
+    font-family: 'Raleway', sans-serif;
+                                        
 
 }
 
@@ -189,7 +207,8 @@ a {
         transform: translateY(0);
         width: 100%;
 /* ------------------------------------------------------------------------Font Bar de Navigation Mode Web-------------------------------------------------------------------------------- */
-        font-family: 'Gentium Basic', serif;                                         
+         font-family: 'Raleway', sans-serif;
+                                          
         
     }
 
@@ -256,11 +275,6 @@ a {
 
 /* -----------------------------------------------------------------------------CSS Khaled ----------------------------------------------------------------------------------------------*/
 
-h2 {
-    font-size: 40px;
-    font-family: 'Varela Round', sans-serif;
-}
-
 article {
     padding-bottom: 10px;
 }
@@ -277,21 +291,12 @@ article {
     width: 95%;
 }
 
-p {
-    font-size: 2rem;
-    font-family: 'Raleway', sans-serif;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .artprincipal p{
   font-size: 1.4rem;
 }
 
-h3 {
-  font-size: 3rem;
-}
+
 .ancre {
     display: flex;
     justify-content: space-around;
@@ -321,7 +326,7 @@ h3 {
         margin-right: 0;
         padding-left: 2%;
         padding-right: 2%;
-        font-size: 1.2rem;
+        font-size: 19px;
         
     }
     .imgtext1, .imgtext3 {
