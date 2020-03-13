@@ -274,6 +274,10 @@ article {
     padding-bottom: 10px;
 }
 
+.articlefin {
+    padding-bottom: 80px;
+}
+
 .artprincipal h1 {
     padding-top: 70px;
     font-size: 5rem;
@@ -316,6 +320,10 @@ article {
 /* Version Web */
 
 @media screen and (min-width: 576px) {
+
+    .articlefin img, .articlefin p {
+        padding-bottom: 100px;
+    }
 
     .artprincipal h1 {
         font-size: 8rem;
