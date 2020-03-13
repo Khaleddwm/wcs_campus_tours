@@ -57,6 +57,7 @@ h2 {
 .Logo-wcs {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 /* Mon body contient une image de fond, qui occupe toute la place*/
 body {
