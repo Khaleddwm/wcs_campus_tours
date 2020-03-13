@@ -322,7 +322,7 @@ article {
 @media screen and (min-width: 576px) {
 
     .articlefin img, .articlefin p {
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
 
     .artprincipal h1 {
